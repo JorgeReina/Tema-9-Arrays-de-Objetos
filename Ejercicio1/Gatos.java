@@ -9,39 +9,42 @@ public class Gatos {
   private String sexo;
   private String color;
 
-  public String getNombre(String nombre) {
+  public Gatos(String n, int e, String s, String c) {
+    this.nombre = n;
+    this.edad = e;
+    this.sexo = s;
+    this.color = c;
+  }
+
+  public String getNombre( ) {
+    return this.nombre;
+  }
+
+  public void setNombre(String nombre) {
     this.nombre = nombre;
-    return nombre;
   }
 
-  public void setNombre(String introduceNombre) {
-    this.nombre = nombre;
+  public int getEdad() {
+    return this.edad;
   }
 
-  public int getEdad(int edad) {
-    this.edad = edad;
-    return edad;
-  }
-
-  public void setEdad() {
+  public void setEdad(int edad) {
     this.edad = edad;
   }
 
-  public String getSexo(String sexo) {
+  public String getSexo() {
+    return this.sexo;
+  }
+
+  public void setSexo(String sexo) {
     this.sexo = sexo;
-    return sexo;
   }
 
-  public void setSexo() {
-    this.sexo = sexo;
+  public String getColor() {
+    return this.color;
   }
 
-  public String getColor(String color) {
-    this.color = color;
-    return color;
-  }
-
-  public void setColor() {
+  public void setColor(String color) {
     this.color = color;
   }
 
