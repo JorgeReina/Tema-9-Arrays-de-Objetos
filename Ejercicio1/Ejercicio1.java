@@ -53,5 +53,12 @@ public class Ejercicio1 {
 
     }
 
+    System.out.println("Introduce cuantas sardinas quieres que coman: ");
+    int sardinas = datos.nextInt();
+
+    for (int i = 0; i < sardinas+1; i++) {
+      cat[2].comer(sardinas);
+    }
+
   }
 }

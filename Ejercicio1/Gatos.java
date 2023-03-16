@@ -48,7 +48,17 @@ public class Gatos {
     this.color = color;
   }
 
-  public void comer() {
-    System.out.println("ÑamÑam");
+  public void comer(int sardinas) {
+
+    int contador = 1;
+
+    if (sardinas > contador) {
+      contador += 1;
+      System.out.println("ÑamÑam");
+    } else {
+      System.out.println("No quedan Sardinas");
+    }
+
+    //System.out.println("ÑamÑam");
   }
 }
