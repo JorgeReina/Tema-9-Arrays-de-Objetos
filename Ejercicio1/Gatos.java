@@ -50,13 +50,15 @@ public class Gatos {
 
   public void comer(int sardinas) {
 
-    int contador = 1;
+    int contador = 0;
 
-    if (sardinas > contador) {
-      contador += 1;
-      System.out.println("ÑamÑam");
-    } else {
-      System.out.println("No quedan Sardinas");
+    for (int i = 0; i < sardinas+1; i++) {
+      if (sardinas > contador) {
+        contador += 1;
+        System.out.println("ÑamÑam");
+      } else {
+        System.out.println("No quedan Sardinas");
+      }
     }
 
     //System.out.println("ÑamÑam");
