@@ -1,4 +1,4 @@
-package ArraysDeObjetos.Ejercicio1;
+package Ejercicio1;
 
 import java.util.Scanner;
 
@@ -24,13 +24,13 @@ public class Ejercicio1 {
     for (int i = 0; i < 4; i++) {
 
       System.out.print("Introduce el nombre: ");
-      String introduceNombre = datos.nextLine();
+      String introduceNombre = datos.next();
 
       System.out.print("Introduce el sexo: ");
-      String sexo = datos.nextLine();
+      String sexo = datos.next();
 
       System.out.print("Introduce el color: ");
-      String color = datos.nextLine();
+      String color = datos.next();
 
       System.out.print("Introduce cuantas sardinas va a comer: ");
       int comida = datos.nextInt();

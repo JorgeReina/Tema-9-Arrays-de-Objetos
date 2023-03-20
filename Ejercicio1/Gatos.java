@@ -1,4 +1,4 @@
-package ArraysDeObjetos.Ejercicio1;
+package Ejercicio1;
 
 
 
