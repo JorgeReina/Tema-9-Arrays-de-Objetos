@@ -32,9 +32,12 @@ public class Ejercicio1 {
       System.out.print("Introduce el color: ");
       String color = datos.nextLine();
 
+      System.out.print("Introduce cuantas sardinas va a comer: ");
+      int comida = datos.nextInt();
+
       int edad = (int)(Math.random()*10+1);
 
-      cat[i] = new Gatos(introduceNombre, edad, sexo, color);
+      cat[i] = new Gatos(introduceNombre, edad, sexo, color, comida);
 
     }
 
@@ -47,16 +50,22 @@ public class Ejercicio1 {
       System.out.println("Edad: " + cat[a].getEdad());
       System.out.println("Sexo: " + cat[a].getSexo());
       System.out.println("Color: " + cat[a].getColor());
+      System.out.println("Sardinas que va a comer: " + cat[a].getSardinas());
 
       System.out.println();
 
     }
 
-    System.out.println("Introduce cuantas sardinas quieres que coman: ");
+    System.out.println("Introduce cuantas sardinas hay disponibles: ");
     int sardinas = datos.nextInt();
 
+    int contadorSardinas = 0;
+
     
-    cat[2].comer(sardinas);
+    for (int i = 0; i < cat.length; i++) {
+      cat[i].comer(sardinas, cat[i].getSardinas(), contadorSardinas);
+      contadorSardinas += cat[i].getSardinas();
+    }
     
 
   }

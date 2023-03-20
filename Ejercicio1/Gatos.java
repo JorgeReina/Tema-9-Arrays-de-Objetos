@@ -8,12 +8,14 @@ public class Gatos {
   private int edad;
   private String sexo;
   private String color;
+  private int sardinas;
 
-  public Gatos(String n, int e, String s, String c) {
+  public Gatos(String n, int e, String s, String c, int sa) {
     this.nombre = n;
     this.edad = e;
     this.sexo = s;
     this.color = c;
+    this.sardinas = sa;
   }
 
   public String getNombre( ) {
@@ -48,10 +50,29 @@ public class Gatos {
     this.color = color;
   }
 
-  public void comer(int sardinas) {
+  public int getSardinas() {
+    return this.sardinas;
+  }
 
-    int contador = 0;
+  public void setSardinas(int sardinas) {
+    this.sardinas = sardinas;
+  }
 
+  public void comer(int saDisponibles, int sardinasGato, int contadorSardinas) {
+
+    //La variable "saDisponibles" son las sardinas que hay disponibles.
+    int contador = saDisponibles;
+    contador -= contadorSardinas;
+
+    for (int i = 0; i < sardinasGato; i++) {
+      if (contador > 0) {
+        System.out.println("ÑamÑam");
+      } else {
+        System.out.println("No quedan sardinas.");
+      }
+    }
+
+    /** 
     for (int i = 0; i < sardinas+1; i++) {
       if (sardinas > contador) {
         contador += 1;
@@ -60,6 +81,7 @@ public class Gatos {
         System.out.println("No quedan Sardinas");
       }
     }
+    */
 
     //System.out.println("ÑamÑam");
   }
