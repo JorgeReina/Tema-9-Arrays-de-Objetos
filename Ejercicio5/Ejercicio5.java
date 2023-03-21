@@ -54,6 +54,52 @@ public class Ejercicio5 {
             botellas[i].listado();
           }
         break;
+      case 2:
+          System.out.println("Alta de Articulos");
+          System.out.println();
+
+          int botellaNueva;
+          int arrayOcupado = 0;
+
+          do {
+            System.out.println("Introduce en Nº del Array quieres crearlo");
+            botellaNueva = datos.nextInt();
+
+            if (botellas[botellaNueva].getCodigo() > 0) {
+              System.out.println("Este array esta ocupado.");
+              arrayOcupado = 0;
+            } else {
+              System.out.println("Este array esta libre y puede utilizarse.");
+              arrayOcupado = 1;
+            }
+          } while(arrayOcupado = 0);
+
+          System.out.println();
+
+          System.out.printf("Introduce el Código del articulo: ");
+          int codigoBotella = datos.nextInt();
+          System.out.println();
+
+          System.out.print("Introduce una descripcion(o Nombre) del Articulo: ");
+          String descripcionBotella = datos.next();
+          System.out.println();
+
+          System.out.print("Introduce el precio de compra(formato: 0.00): ");
+          double pCompra = datos.nextDouble();
+          System.out.println();
+
+          System.out.print("Introduce el precio de venta: ");
+          double pVenta = datos.nextDouble();
+          System.out.println();
+
+          System.out.print("Introduce el Stok del articulo: ");
+          int nStock = datos.nextInt();
+          System.out.println();
+
+          System.out.println("El artículo ha sido creado correctamente.");
+
+          botellas[botellaNueva] = new Articulos(codigoBotella, descripcionBotella, pCompra, pVenta, nStock);
+        break;
     
       default:
         break;

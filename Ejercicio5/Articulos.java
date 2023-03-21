@@ -61,9 +61,11 @@ public class Articulos {
     int cantidad = 1;
 
     for (int i = 0; i < cantidad; i++) {
+      //Solo va a mostrar los articulos registrados(Todos aquellos que su codigo sea mayor a 0)
       if (this.codigo > 0) {
         System.out.printf("Codigo: %d   Descripcion: %s   P.Compra: %.2f    P.Venta: %.2f   Stock: %d\n", getCodigo(), getDescripcio(), getPrecioCompra(), getPrecioVenta(), getStock());
       }
     }
   }
+
 }
