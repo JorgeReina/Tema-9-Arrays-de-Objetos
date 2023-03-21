@@ -2,11 +2,11 @@ package Ejercicio5;
 
 public class Articulos {
   
-  private int codigo = 0;
-  private String descripcion = "Vacio";
-  private double precioCompra = 0;
-  private double precioVenta = 0;
-  private int stock = 0;
+  private int codigo;
+  private String descripcion;
+  private double precioCompra;
+  private double precioVenta;
+  private int stock;
 
   public Articulos(int codigo, String descripcion, double precioCompra, double precioVenta, int stock) {
     this.codigo = codigo;
