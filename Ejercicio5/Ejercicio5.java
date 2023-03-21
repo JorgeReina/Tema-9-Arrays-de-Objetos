@@ -17,9 +17,6 @@ public class Ejercicio5 {
 
     Scanner datos = new Scanner(System.in);
 
-    //Cuenta los articulos creados.(Hay uno por defecto)
-    int contador = 1;
-
     boolean salida = true;
 
     Articulos[] botellas = new Articulos[99];
@@ -61,7 +58,7 @@ public class Ejercicio5 {
         case 1:
             System.out.println("Lista de Obejtos");
             System.out.println();
-            for (int i = 0; i < contador; i++) {
+            for (int i = 0; i < botellas.length; i++) {
               botellas[i].listado();
             }
             
@@ -75,7 +72,7 @@ public class Ejercicio5 {
             boolean ocupado = false;
   
             do {
-              System.out.print("Introduce en Nº del Array en el que quieres crearlo: ");
+              System.out.print("Introduce el Numero del Array en el que quieres crearlo: ");
               botellaNueva = datos.nextInt();
   
               System.out.println();
@@ -119,8 +116,6 @@ public class Ejercicio5 {
             botellas[botellaNueva].setPrecioVenta(pVenta);
             botellas[botellaNueva].setStock(nStock);
   
-            //Suma 1 al contador de articulos.
-            contador += 1;
           break;
         case 3:
             System.out.print("Introduce el numero de array del Articulo que quieres dar de baja: ");
